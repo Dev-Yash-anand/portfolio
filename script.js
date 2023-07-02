@@ -7,6 +7,7 @@ var para = document.querySelector("#para")
 var h1 = document.querySelector('#h1')
 var crsr = document.querySelector('.cursor');
 var cnct = document.querySelector('#cnct');
+var anim = document.querySelector('#anim');
 
 sun.addEventListener('click', function(){
     document.body.classList.toggle("dark");
@@ -16,6 +17,7 @@ sun.addEventListener('click', function(){
         skill.style.color = "white"
         para.style.color = "white"
         cnct.style.color = "white"
+        anim.style.after = "rgba(0, 0, 0, 0.893)"
     }else{
         sun.src = "moon.png";
         h1.style.color = "black"

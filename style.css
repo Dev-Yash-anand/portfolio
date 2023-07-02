@@ -281,3 +281,56 @@ h3{
     top: 60%;
     position: absolute;
 }
+.wrapper{
+    display: inline-flex;
+    position: absolute;
+    left: 4%;
+}
+.wrapper .static-txt{
+    font-size: 40px;
+    color: black;
+    font-weight: 500;
+}
+.wrapper .dynamic-txt{
+    margin-left: 15px;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.dynamic-txt li span{
+    color: blue;
+    position: relative;
+}
+.dynamic-txt li{
+    list-style: none;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(3) infinite;
+}
+@keyframes slide{
+    100%{
+       top: -150px;
+    }
+}
+.dynamic-txt li span::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    background: lightblue;
+    border-left: 2px solid blue;
+    animation: typing 2s steps(13) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -27px 0 27px;
+    }
+}
+#mera{
+    font-size: 100px;
+    color: blue;
+}
