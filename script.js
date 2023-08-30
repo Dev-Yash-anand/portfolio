@@ -32,3 +32,19 @@ document.addEventListener('mousemove', function(e){
     crsr.style.top = e.y + "px"
 })
 
+gsap.to(".header",{
+    backgroundColor: "white",
+    height: "95px",
+    duration: 1,
+    scrollTrigger:{
+       trigger:"#nav",
+       scroller: "body",
+       start: "top -25%",
+       end: "top -11%",
+       scrub: 1
+    }
+ })
+var preloader = document.querySelector(".preloader");
+window.addEventListener("load",function(){
+    preloader.style.display = "none"
+})

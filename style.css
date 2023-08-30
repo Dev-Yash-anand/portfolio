@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: lightblue;
+    background-color:  lightblue;
 }
 
 .main{
@@ -16,9 +16,12 @@ body{
 }
 .header{
     display: flex;
-    /* background-color: red; */
+    position: fixed;
+    /* background-color: white; */
     height: 100px;
     align-items: center;
+    width: 100%;
+    z-index: 99;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
@@ -105,7 +108,6 @@ button{
     border-radius: 9%;
     font-weight: 1000;
     height: 60px;
-    /* border-color: yellow; */
     width: 130px;
     font-size: 17px;
     transition: ease 0.8;
@@ -164,6 +166,7 @@ h3{
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 10;
+    transition: all linear 0.1s;
 }
 
 .port ~ .cursor {
@@ -171,6 +174,25 @@ h3{
 }
 #h1{
     color: black;
+}
+#h1hover ::after{
+    animation-name: line;
+    animation-duration: 2s;
+}
+
+@keyframes line {
+   0%{
+    width: 0;
+    left: 0;
+   } 
+   50%{
+    width: 100%;
+    left: 0;
+   }
+   100%{
+    width: 0;
+    left: 100%;
+   }  
 }
 
 .page2{
@@ -182,7 +204,7 @@ h3{
 #cv{
     position: absolute;
     left: 37%;
-    border-radius: 10%;
+    border-radius: 50px;
     top: 17%;
 }
 
@@ -211,7 +233,7 @@ h3{
     right: 5.3%;
     border-radius: 20%;
     box-shadow: 0 10px 20px rgb(40, 40, 40);
-    z-index: 99;
+    z-index: 98;
     transition: ease-in-out 0.3s;
 }
 #yash:hover{
@@ -332,5 +354,13 @@ h3{
 }
 #mera{
     font-size: 100px;
-    color: blue;
+    color: rgba(0, 0, 255, 0.498);
+}
+.preloader {
+    position: fixed;
+    /* background-size: 1%; */
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: black url(https://i.pinimg.com/originals/fb/f4/b4/fbf4b4b5b982c142d6b25d8bf45daa40.gif) no-repeat center center;
 }
